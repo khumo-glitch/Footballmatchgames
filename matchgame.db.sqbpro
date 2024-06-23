@@ -1,0 +1,22 @@
+def main():
+    db_path = r'C:\Users\UchenduK\OneDrive - Version 1\Documents\workspace\Python\DBSQLLITE\matchgame.db'
+    conn = connect_to_db(db_path)
+
+    if conn:
+        try:
+            cursor = conn.cursor()
+            cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
+            tables = cursor.fetchall()
+            print("Tables in the database:")
+            for table in tables:
+                print(table[0])
+            cursor.close()
+        except sqlite3.Error as e:
+            print(f"Error: {e}")
+            conn.close()
+            return
+
+        # Rest of your menu-driven code here
+        ...
+    else:
+        print("Unable to connect to the database. Exiting program.")

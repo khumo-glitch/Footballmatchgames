@@ -1,0 +1,3 @@
+game_id,home_team_id,away_team_id,date,time,street,city,county,postal_code,season_id,coach_id
+1,1,2,2024-07-01,15:00,99 Waterloo Road,Molineux Stadium,Wolverhampton,WV1 4QU,1,1
+2,3,4,2024-07-02,17:00,154 Trinity Rd,Ashton Villa F.C,Birmingham,B6 BHE,1,1
